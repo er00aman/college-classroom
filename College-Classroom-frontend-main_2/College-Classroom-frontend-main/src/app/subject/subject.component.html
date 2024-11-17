@@ -1,0 +1,51 @@
+<div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Add subject
+      </h4>
+    </div>
+  </section>
+</div>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-atuo d-block mb-3">
+        <a routerLink="/layout/manage-subject" class="btn btn-dark">Manage subject</a>
+        </div>
+        <div>
+          <form class="mb-5" [formGroup]="subjectAdd" (submit)="add()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose department</label>
+              <ng-select formControlName="departmentId">
+                <ng-option *ngFor="let department of allDepartment"[value]="department._id" >{{department.name}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose course</label>
+              <ng-select formControlName="courseId">
+                <ng-option *ngFor="let course of allCourse"[value]="course._id">{{course.courseName}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose semester</label>
+              <ng-select formControlName="semesterId">
+                <ng-option *ngFor="let semester of allSemester"[value]="semester._id">{{semester.semester}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label px-3" >Subject</label>
+              <input type="text" class="form-control px-3" formControlName="subjectName">
+            </div>
+            <div class="login-button">
+              <button type="submit" class="btn mx-auto d-block">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

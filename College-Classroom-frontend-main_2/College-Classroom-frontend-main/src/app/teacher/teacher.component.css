@@ -1,0 +1,60 @@
+.mb-3 input{
+  border: 1px solid black !important;
+  font-size: 20px;
+}
+textarea{
+  border: 1px solid black !important;
+}
+.mb-3 select{
+  border: 1px solid black !important;
+}
+.mb-3 label{
+  color: #060606 !important;
+}
+.login-button button:hover{
+  background-color: #3F3D56;
+  color: #fff;
+}
+.main-row{
+  margin-top: 20vh;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.178);
+}
+label{
+  color: black;
+}
+ng-select{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.login-button button:hover{
+  background-color: #209c52 !important;
+  color: #fff;
+}
+button:hover{
+  background-color: #209c52 !important;
+  color: #fff;
+}
+a{
+  float: right;
+  background-color: #1e2e28;
+ }
+a:hover{
+  background-color: #209c52 !important;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  button {
+    background-color: #E60052;
+    border-radius: 20px;
+    color: #fff;
+    width: 8rem !important;
+  }
+}
+@media (min-width: 600px) {
+  button {
+    background-color: #E60052;
+  color: #fff;
+  border-radius: 20px;
+  width: 8rem !important;
+  }
+}

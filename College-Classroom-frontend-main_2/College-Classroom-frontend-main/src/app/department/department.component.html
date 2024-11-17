@@ -1,0 +1,37 @@
+ <!-- <=== add department code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Add department
+      </h4>
+    </div>
+  </section>
+</div>
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-auto d-block mb-3">
+          <a routerLink="/layout/manage-department" class="btn btn-dark">Manage-department</a>
+        </div>
+        <div>
+          <form [formGroup]="department" (submit)="add()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Department name</label>
+              <input
+              type="name"
+              class="form-control px-3"
+              id="#"
+              aria-describedby="emailHelp" formControlName="name">
+            </div>
+            <div class="login-button">
+              <button type="submit"class="btn mx-auto d-block">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

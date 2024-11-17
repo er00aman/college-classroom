@@ -1,0 +1,64 @@
+.mb-3 input{
+  border: 1px solid black !important;
+  /* border-radius: 20px; */
+  font-size: 20px;
+}
+.mb-3 select{
+  border: 1px solid black !important;
+  /* border-radius: 20px; */
+}
+.mb-3 label{
+  color: #060606 !important;
+}
+.login-button button:hover{
+  background-color: #209c52;
+  color: #fff;
+}
+.main-row{
+  margin-top: 20vh;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.178);
+}
+.course-container{
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.178);
+  border-radius: 20px;
+}
+.course-container h3{
+  font-weight: 550;
+  color: #333333;
+}
+ng-select{
+  border: 1px solid black !important;
+  border-radius: 5px;
+}
+a{
+  background-color: #1e2e28;
+  float: right;
+}
+a:hover{
+  background-color: #209c52;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  button {
+    background-color: #E60052;
+    border-radius: 20px;
+    color: #fff;
+    width: 8rem !important;
+  }
+  button:hover{
+    background-color: #209c52 !important;
+    color: #fff;
+  }
+}
+@media (min-width: 600px) {
+  button {
+    background-color: #E60052;
+  color: #fff;
+  border-radius: 20px;
+  width: 8rem !important;
+  }
+  button:hover{
+    background-color: #209c52 !important;
+    color: #fff;
+  }
+}

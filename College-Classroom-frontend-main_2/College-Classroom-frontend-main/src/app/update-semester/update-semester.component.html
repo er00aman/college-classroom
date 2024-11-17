@@ -1,0 +1,45 @@
+ <!-- <=== add department code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Update semester
+      </h4>
+    </div>
+  </section>
+</div>
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-auto d-block mb-3">
+          <a routerLink="/layout/manage-semester" class="btn btn-dark">Manage-semester</a>
+        </div>
+        <div>
+          <form [formGroup]="updateSemester" (submit)="updateSem()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose department</label>
+              <ng-select formControlName="departmentId">
+                <ng-option *ngFor="let dept of allDepartment;" [value]="dept._id">{{dept.name}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose course</label>
+              <ng-select formControlName="courseId">
+                <ng-option *ngFor="let course of allCourse;" [value]="course._id">{{course.courseName}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label px-3">Semester</label>
+              <input type="number" class="form-control px-3" formControlName="semester">
+            </div>
+            <div class="login-button">
+              <button type="submit"class="btn mx-auto d-block">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

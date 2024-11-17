@@ -1,0 +1,41 @@
+ <!-- <=== add course code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Update course
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-atuo d-block mb-3">
+        <a routerLink="/layout/manage-course" class="btn btn-dark">Manage course</a>
+        </div>
+        <div>
+          <form class="mb-5" [formGroup]="updateCourse" (submit)="update()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose department</label>
+              <ng-select formControlName="departmentId">
+                <ng-option *ngFor="let dept of allDept;" [value]="dept._id">{{dept.name}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label px-3">Course</label>
+              <input type="text" class="form-control px-3" formControlName="courseName">
+            </div>
+            <div class="login-button">
+              <button type="submit" class="btn mx-auto d-block">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

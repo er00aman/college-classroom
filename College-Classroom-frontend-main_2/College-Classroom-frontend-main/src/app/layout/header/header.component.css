@@ -1,0 +1,13 @@
+.logo span{
+  font-size: 20px !important;
+}
+a{
+  font-size: 15px !important;
+}
+#loginEmail a{
+  border-radius: 20px;
+  background-color: #F50057;
+  color: rgb(254, 252, 252);
+  margin-top: 5px;
+  padding: 4px;
+}

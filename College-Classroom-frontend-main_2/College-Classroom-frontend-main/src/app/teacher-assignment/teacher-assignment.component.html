@@ -1,0 +1,82 @@
+ <!-- <=== upload teacher-material code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Teacher upload assignment
+      </h4>
+    </div>
+  </section>
+</div>
+
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-auto d-block mb-5">
+          <a routerLink="/layout/manage-assignment" class="btn btn-dark">Manage assignment</a>
+        </div>
+        <div>
+          <form [formGroup]='uploadAssignment' (submit)="add()">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label px-3">Choose Department</label>
+                <ng-select formControlName="departmentId">
+                  <ng-option *ngFor="let depart of allDepart" [value]="depart._id">{{depart.name}}</ng-option>
+              </ng-select>
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label px-3">Choose Course</label>
+                <ng-select formControlName="courseId">
+                  <ng-option *ngFor="let course of allCourse" [value]="course._id">{{course.courseName}}</ng-option>
+              </ng-select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="row">
+                 <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label px-3">Choose Semester</label>
+                <ng-select formControlName="semesterId">
+                  <ng-option *ngFor="let sem of allSemester" [value]="sem._id">{{sem.semester}}</ng-option>
+              </ng-select>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="exampleInputEmail1" class="form-label px-3">Choose Subject</label>
+                  <ng-select formControlName="subjectId">
+                    <ng-option *ngFor="let sub of allSubject" [value]="sub._id">{{sub.subjectName}}</ng-option>
+                </ng-select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label px-3">Upload/file</label>
+                  <input type="file" class="form-control px-3 text-uppercase" formControlName="file">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label px-3">Assignment number</label>
+                  <input type="number" class="form-control px-3 text-uppercase" formControlName="assignmentNumber">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label px-3">Write assignment</label>
+                  <textarea name="" id="" cols="70" rows="10" class="px-3 form-control" formControlName="writeAssignment"></textarea>
+                </div>
+            </div>
+            <div class="login-button">
+              <button type="submit" class="btn mx-auto d-block">Upload</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== upload teacher-material end ===> -->

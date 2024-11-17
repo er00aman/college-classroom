@@ -1,0 +1,57 @@
+ <!-- <=== add department code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Manage teacher
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto d-block">
+        <a routerLink="/layout/add-teacher" class="btn btn-dark mb-2">Add</a>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">S.N</th>
+                <th scope="col">Department</th>
+                <th scope="col">Course</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Work experience</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Date of join</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let teacher of allTeacher; let i=index;">
+                <td>{{i+1}}</td>
+                <td>{{teacher.departmentId.name}}</td>
+                <td>{{teacher.courseId.courseName}}</td>
+                <td>{{teacher.teacherName}}</td>
+                <td>{{teacher.teacherRegisterEmail}}</td>
+                <td>{{teacher.workExperience}}</td>
+                <td>{{teacher.teacherDesignation}}</td>
+                <td>{{teacher.createdAt}}</td>
+                <td>
+                  <a [routerLink]="['/layout/update-add-teacher', teacher._id]">
+                    <i class="fa fa-edit text-success px-3"></i>
+                  </a>
+                  <i class="fa fa-trash text-danger px-3" (click)="deleteUser(teacher._id)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

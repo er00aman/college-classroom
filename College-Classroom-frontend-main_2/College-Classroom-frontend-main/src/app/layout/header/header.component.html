@@ -1,0 +1,69 @@
+  <!--header-->
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke">
+            <h3 class="logo">
+                <a class="navbar-brand" routerLink="/layout/home">
+                    <img class="img-fluid" src="assets/images/logo.png" alt=" "><span>DAVIET Classroom</span>
+                </a>
+            </h3>
+            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-lg-auto">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" routerLink="/layout/home">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/department" *ngIf="userType == 1">Department</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/course" *ngIf="userType == 1">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/semester" *ngIf="userType == 1 || userType == 2">Semester</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/teacher-material" *ngIf="userType == 1 || userType == 2">T-Merial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/teacher-assignment" *ngIf="userType == 1 || userType == 2">T-Assignment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/student-assignment" *ngIf="userType == 3 || userType == 2">S-Assignment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/subject" *ngIf="userType == 1">Subject</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/add-student" *ngIf="userType == 2">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/layout/subject" *ngIf="userType == 2">Subject</a>
+                    </li>
+                    <li class="nav-item" *ngIf="teacherRegisterEmail == null">
+                        <a class="nav-link" routerLink="/layout/teacher-login">Teacher login</a>
+                    </li>
+                    <li class="nav-item" *ngIf="teacherRegisterEmail == null">
+                        <a class="nav-link" routerLink="/layout/student-login">Student login</a>
+                    </li>
+                    <li class="nav-item" *ngIf="email == null">
+                        <a class="nav-link" routerLink="/layout/admin-login">Admin login</a>
+                    </li>
+                    <li class="nav-item" *ngIf="email">
+                        <a class="nav-link" (click)="logout()">Logout</a>
+                    </li>
+                    <li id="loginEmail">
+                        <a class="nav-link">{{email}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--//header-->

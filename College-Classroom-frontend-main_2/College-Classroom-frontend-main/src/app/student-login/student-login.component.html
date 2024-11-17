@@ -1,0 +1,36 @@
+<!-- <=== admin-login code start ===> -->
+<div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+        Student login
+      </h4>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div>
+          <form [formGroup]="studentLogin" (submit)="login()">
+            <div class="mb-3">
+              <label for="universityRollNo" class="form-label px-3">University roll no</label>
+              <input type="number" class="form-control px-3" id="universityRollNo" aria-describedby="rollHelp" formControlName="universityRollNo">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label px-3">Password</label>
+              <input type="password" class="form-control px-3" id="password" formControlName="password">
+            </div>
+            <div class="login-button">
+              <button type="submit" class="btn mx-auto d-block">Login</button>
+              <span><a href="/layout/student-forget-password">Forget password</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <=== admin-login code end ===> -->

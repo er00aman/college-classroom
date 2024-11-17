@@ -1,0 +1,70 @@
+ <!-- <=== add course code start ===> -->
+
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Update student
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div class="mx-auto d-block mb-3">
+          <a routerLink="/layout/manage-student" class="btn btn-dark">Manage student</a>
+        </div>
+        <div>
+          <form [formGroup]="updateStudent" (submit)="update()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Choose department</label>
+              <ng-select formControlName="departmentId">
+                <ng-option *ngFor="let depart of allDepart" [value]="depart._id">{{depart.name}}</ng-option>
+             </ng-select>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label px-3">Choose course</label>
+                  <ng-select formControlName="courseId">
+                    <ng-option *ngFor="let course of allCourse" [value]="course._id">{{course.courseName}}</ng-option>
+                </ng-select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label px-3 text-dark">Choose Semester</label>
+                <ng-select formControlName="semesterId">
+                  <ng-option *ngFor="let semester of allSemester" [value]="semester._id">{{semester.semester}}</ng-option>
+              </ng-select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label px-3">Name</label>
+              <input type="text" class="form-control px-3" formControlName="studentName">
+            </div>
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="exampleInputPassword1" class="form-label px-3 ">University roll no</label>
+                  <input type="number" class="form-control px-3" formControlName="universityRollNo">
+                </div>
+                <div class="col-md-6">
+                  <label for="exampleInputPassword1" class="form-label px-3">Class roll no</label>
+                  <input type="number" class="form-control px-3" formControlName="cRollNo">
+                </div>
+              </div>
+            </div>
+            <div class="login-button">
+              <button type="submit" class="btn mx-auto d-block">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

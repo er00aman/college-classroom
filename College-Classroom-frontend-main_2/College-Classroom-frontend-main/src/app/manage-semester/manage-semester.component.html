@@ -1,0 +1,49 @@
+ <!-- <=== add department code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Manage semester
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto d-block">
+        <a routerLink="/layout/semester" class="btn btn-dark mb-2">Add</a>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">S.N</th>
+                <th scope="col">Department</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let semester of allSemester; let i=index" >
+                <td>{{i+1}}</td>
+                <td>{{semester.departmentId.name}}</td>
+                <td>{{semester.courseId.courseName}}</td>
+                <td>{{semester.semester}}</td>
+                <td>
+                  <a [routerLink]="['/layout/update-semester', semester._id]">
+                    <i class="fa fa-edit text-success px-3"></i>
+                  </a>
+                  <i class="fa fa-trash text-danger px-3" (click)="deleteUser(semester._id)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

@@ -1,0 +1,57 @@
+ <!-- <=== add department code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Manage assignment
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto d-block">
+        <a routerLink="/layout/teacher-assignment" class="btn btn-dark mb-2">Add</a>
+        <div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">S.N</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col">Assignment</th>
+                  <th scope="col">Written-assignment</th>
+                  <th scope="col">Assignment no</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let allAssign of allAssignment" let i="index">
+                  <th>{{1}}</th>
+                  <td>{{allAssign.departmentId.name}}</td>
+                  <th>{{allAssign.courseId.courseName}}</th>
+                  <td>{{allAssign.subjectId.subjectName}}</td>
+                  <td>{{allAssign.semesterId.semester}}</td>
+                  <td>{{allAssign.file}}</td>
+                  <td>{{allAssign.writeAssignment}}</td>
+                  <td>{{allAssign.assignmentNumber}}</td>
+                  <td>
+                    <i class="fa fa-edit text-success px-3"></i>
+                    <i class="fa fa-trash text-danger px-3"(click)="deleteUser()"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

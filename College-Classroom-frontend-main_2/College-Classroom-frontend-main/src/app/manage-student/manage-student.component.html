@@ -1,0 +1,56 @@
+ <!-- <=== add department code start ===> -->
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Manage student
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto d-block">
+        <a routerLink="/layout/add-student" class="btn btn-dark mb-2">Add</a>
+        <div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">S.N</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Student-name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">University roll-no</th>
+                  <th scope="col">College roll-no</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let student of allStudent; let i = index">
+                  <th>{{i+1}}</th>
+                  <td>{{student.departmentId.name}}</td>
+                  <td>{{student.courseId.courseName}}</td>
+                  <td>{{student.studentName}}</td>
+                  <td>{{student.studentEmail}}</td>
+                  <td>{{student.universityRollNo}}</td>
+                  <td>{{student.cRollNo}}</td>
+                  <td>{{student.semesterId.semester}}</td>
+                  <td>
+                    <i class="fa fa-edit text-success px-3"[routerLink]="['/layout/update-add-student',student._id]"></i>
+                    <i class="fa fa-trash text-danger px-3"(click)="deleteUser(student._id)"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== add course ===> -->

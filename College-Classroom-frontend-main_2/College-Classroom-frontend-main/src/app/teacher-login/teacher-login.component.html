@@ -1,0 +1,40 @@
+ <!-- <=== Teacher-login code start ===> -->
+
+ <div class="inner-banner">
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">
+       Teacher login
+      </h4>
+    </div>
+  </section>
+</div>
+
+ <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto d-block">
+        <div>
+          <form class="mb-5" [formGroup]="teacher"(submit)="login()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label px-3">Username</label>
+              <input type="email" class="form-control px-3" aria-describedby="emailHelp" formControlName="teacherRegisterEmail">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label px-3">Password</label>
+              <input type="password" class="form-control px-3" formControlName="password">
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="login-button">
+                  <button type="submit" class="btn mx-auto d-block">Login</button><span><a href="/layout/teacher-forget-password">Forget password</a></span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- <=== Teacher-login-code end ===> -->
